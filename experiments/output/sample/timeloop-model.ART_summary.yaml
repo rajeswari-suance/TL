@@ -1,0 +1,60 @@
+ART_summary:
+  version: 0.3
+  table_summary:
+  - name: System.Chiplet[0..15].PE[0..15].LMAC[0..31]
+    area: 332.25
+    primitive_estimations: Aladdin_table
+  - name: System.DRAM
+    area: 0
+    primitive_estimations: Cacti
+  - name: System.Chiplet[0..15].PE[0..15].PEInputBuffer
+    area: 22961.72
+    primitive_estimations:
+    - name: storage
+      estimator: Aladdin_table
+    - name: address_generators[0..1]
+      estimator: Aladdin_table
+  - name: System.Chiplet[0..15].PE[0..15].PEWeightBuffer[0..3]
+    area: 10354.68
+    primitive_estimations:
+    - name: storage
+      estimator: Aladdin_table
+    - name: address_generators[0..1]
+      estimator: Aladdin_table
+  - name: System.Chiplet[0..15].PE[0..15].PEAccuBuffer[0..3]
+    area: 2234.68
+    primitive_estimations:
+    - name: storage
+      estimator: Aladdin_table
+    - name: address_generators[0..1]
+      estimator: Aladdin_table
+  - name: System.Chiplet[0..15].PE[0..15].PEWeightRegs[0..31]
+    area: 5.98
+    primitive_estimations:
+    - name: storage
+      estimator: Aladdin_table
+  - name: System.Chiplet[0..15].GlobalBuffer
+    area: 417462.0
+    primitive_estimations:
+    - name: storage
+      estimator: Cacti
+    - name: address_generators[0..1]
+      estimator: Aladdin_table
+  - name: System.Chiplet[0..15].NoC
+    area: 176.0
+    primitive_estimations:
+    - name: Y_memory_controller[0..3]
+      estimator: Aladdin_table
+    - name: X_memory_controller[0..15]
+      estimator: Aladdin_table
+    - name: Y_X_wire
+      estimator: dummy_table
+  - name: System.NoP
+    area: 176.0
+    primitive_estimations:
+    - name: Y_memory_controller[0..3]
+      estimator: Aladdin_table
+    - name: X_memory_controller[0..15]
+      estimator: Aladdin_table
+    - name: Y_X_wire
+      estimator: dummy_table

@@ -27,9 +27,9 @@ Info: Parsing file components/Legacy.yaml for compound_components info
 Info: Parsing file components/reg_storage.yaml for compound_components info 
 Info: Parsing file components/smartbuffer_RF.yaml for compound_components info 
 Info: Parsing file components/smartbuffer_SRAM.yaml for compound_components info 
-Info: primitive component file parsed:  /usr/local/share/accelergy/primitive_component_libs/soc_primitives.lib.yaml 
-Info: primitive component file parsed:  /usr/local/share/accelergy/primitive_component_libs/pim_primitive_component.lib.yaml 
 Info: primitive component file parsed:  /usr/local/share/accelergy/primitive_component_libs/primitive_component.lib.yaml 
+Info: primitive component file parsed:  /usr/local/share/accelergy/primitive_component_libs/pim_primitive_component.lib.yaml 
+Info: primitive component file parsed:  /usr/local/share/accelergy/primitive_component_libs/soc_primitives.lib.yaml 
 Info: Found non-numeric expression 1ns. Available bindings: {'depth': 1, 'word-bits': 8, 'cluster-size': 64, 'num-ports': 2, 'meshX': 16, 'datawidth': 8, 'technology': '45nm', 'latency': '1ns', 'width': 16} 
 WARN: Failed to evaluate "1ns". Setting System.Chiplet[0..15].PE[0..15].PEWeightRegs[0..31].latency="1ns". Available bindings: {'depth': 1, 'word-bits': 8, 'cluster-size': 64, 'num-ports': 2, 'meshX': 16, 'datawidth': 8, 'technology': '45nm', 'latency': '1ns', 'width': 16}
 Info: Found non-numeric expression 5ns. Available bindings: {'datawidth': 8, 'meshX': 16, 'word-bits': 8, 'technology': '45nm', 'num_pipeline_stages': 2, 'latency': '5ns'} 
@@ -179,18 +179,18 @@ Info: Calculated "n_cols_per_row * n_rows" = 12
 Info: Calculated "n_rows-1" = 3 
 Info: Calculated "n_cols_per_row * n_rows" = 16 
 Info: estimator plug-in identified by:  /usr/local/share/accelergy/estimation_plug_ins/dummy_tables/dummy.estimator.yaml 
-Info: estimator plug-in identified by:  /usr/local/share/accelergy/estimation_plug_ins/accelergy-cacti-plug-in/cacti.estimator.yaml 
 Info: estimator plug-in identified by:  /usr/local/share/accelergy/estimation_plug_ins/accelergy-table-based-plug-ins/table.estimator.yaml 
 table-based-plug-ins Identifies a set of tables named:  test_tables
+Info: estimator plug-in identified by:  /usr/local/share/accelergy/estimation_plug_ins/accelergy-cacti-plug-in/cacti.estimator.yaml 
 Info: estimator plug-in identified by:  /usr/local/share/accelergy/estimation_plug_ins/accelergy-aladdin-plug-in/aladdin.estimator.yaml 
 Info: CACTI plug-in... Querying CACTI for request:
  {'class_name': 'SRAM', 'attributes': OrderedDict([('technology', '45nm'), ('width', 256), ('depth', 2048), ('n_rdwr_ports', 2), ('n_banks', 1), ('n_rd_ports', 0), ('n_wr_ports', 0), ('latency', '5ns')]), 'action_name': 'write', 'arguments': {'data_delta': 0, 'address_delta': 0}}
-copy  /usr/local/share/accelergy/estimation_plug_ins/accelergy-cacti-plug-in/default_SRAM.cfg  to  /usr/local/share/accelergy/estimation_plug_ins/accelergy-cacti-plug-in/cacti/timeloop-mapper.05_15_12_23_07_SRAM.cfg
-CACTI plug-in removing temp file:  /usr/local/share/accelergy/estimation_plug_ins/accelergy-cacti-plug-in/cacti/timeloop-mapper.05_15_12_23_07_SRAM.cfg
+copy  /usr/local/share/accelergy/estimation_plug_ins/accelergy-cacti-plug-in/default_SRAM.cfg  to  /usr/local/share/accelergy/estimation_plug_ins/accelergy-cacti-plug-in/cacti/timeloop-mapper.08_03_19_36_24_SRAM.cfg
+CACTI plug-in removing temp file:  /usr/local/share/accelergy/estimation_plug_ins/accelergy-cacti-plug-in/cacti/timeloop-mapper.08_03_19_36_24_SRAM.cfg
 Warn: No action counts are specified as yaml input 
-Info: flattened architecture is saved to: output/arch_map/timeloop-mapper.flattened_architecture.yaml 
-Info: energy reference table is saved to: output/arch_map/timeloop-mapper.ERT.yaml 
-Info: energy reference table summary is saved to: output/arch_map/timeloop-mapper.ERT_summary.yaml 
+Info: flattened architecture is saved to: output/arch//timeloop-mapper.flattened_architecture.yaml 
+Info: energy reference table is saved to: output/arch//timeloop-mapper.ERT.yaml 
+Info: energy reference table summary is saved to: output/arch//timeloop-mapper.ERT_summary.yaml 
 Warn: no runtime energy estimations are generated... not generating energy_estimation.yaml 
-Info: area reference table is saved to: output/arch_map/timeloop-mapper.ART.yaml 
-Info: area reference table summary is saved to: output/arch_map/timeloop-mapper.ART_summary.yaml 
+Info: area reference table is saved to: output/arch//timeloop-mapper.ART.yaml 
+Info: area reference table summary is saved to: output/arch//timeloop-mapper.ART_summary.yaml 

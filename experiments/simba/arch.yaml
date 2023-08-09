@@ -32,8 +32,14 @@ architecture:
                 n_rdwr_ports: 2
                 read_bandwidth: 16 # word/cycle
                 write_bandwidth: 16
+                network_read: NoC
+            - name: NoC
+              class: Legacy
+              attributes:
+                word-bits: 8
+                energy-per-hop: 0.952
           subtree:
-            - name: PE[0..15]
+            - name: PE[0..8]
               local:
                 - name: PEInputBuffer
                   class: storage
@@ -44,32 +50,7 @@ architecture:
                     word-bits: 8
                     block-size: 8
                     meshX: 4
-                - name: PEWeightBuffer[0..3]
-                  class: storage
-                  subclass: smartbuffer_RF
-                  attributes:
-                    depth: 512
-                    word-bits: 8
-                    block-size: 8
-                    nbanks: 8
-                    meshX: 4
-                - name: PEAccuBuffer[0..3]
-                  class: storage
-                  subclass: smartbuffer_RF
-                  attributes:
-                    depth: 128
-                    word-bits: 24
-                    meshX: 4
-                - name: PEWeightRegs[0..31]
-                  class: storage
-                  subclass: reg_storage
-                  attributes:
-                    depth: 1
-                    word-bits: 8
-                    cluster-size: 64
-                    num-ports: 2
-                    meshX: 4
-                - name: LMAC[0..31]
+                - name: LMAC[0..15]
                   class: compute
                   subclass: intmac
                   attributes:

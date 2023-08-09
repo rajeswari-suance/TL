@@ -5,6 +5,7 @@ RUN apt-get update
 RUN apt-get install -y git build-essential cmake
 RUN apt-get install -y libboost-all-dev libconfig++-dev libyaml-cpp-dev
 RUN apt-get install -y python3-pip python-is-python3 
+RUN apt-get install -y gdb
 
 WORKDIR /setup/accelergy
 RUN git clone https://github.com/HewlettPackard/cacti.git

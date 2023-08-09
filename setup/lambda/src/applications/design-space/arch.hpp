@@ -168,6 +168,7 @@ class ArchSpace
   
   void InitializeFromFile(std::string filename)
   {    
+    std::cout << "Initializing Architectures from file "  << std::endl;
     std::ifstream fin;
     fin.open(filename);
     YAML::Node filecontents = YAML::Load(fin);

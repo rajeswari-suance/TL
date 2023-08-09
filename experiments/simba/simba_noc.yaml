@@ -5,7 +5,7 @@ architecture:
   subtree:
     - name: System
       attributes:
-       # global attributes - it will apply to all the links till PE level 
+        # global attributes - it will apply to all the links till PE level
         datawidth: 8
         word-bits: 8
         technology: 45nm
@@ -22,12 +22,12 @@ architecture:
             # useful only in specific case. instance. will be used in cosa(a type of mapper which works on timeloop). specify in two ways: DRAM[0..3] or instances:4
             instances: 1
             # if we want to find the communication between dram and chiplet. this is an example
-            network_read: PCIe
-          - name: PCIe
-            class: Legacy
-            attributes:
-              word-bits: 8
-              energy-per-hop: 0.952
+          #   network_read: PCIe
+          # - name: PCIe
+          #   class: Legacy
+          #   attributes:
+          #     word-bits: 8
+          #     energy-per-hop: 0.952
           # if we have multiple GlobalBuffer, go with lambda
       subtree:
         - name: Chiplet
@@ -44,7 +44,7 @@ architecture:
                 read_bandwidth: 16
                 write_bandwidth: 16
                 network_read: NoC
-                network_fill: PCIe
+                # network_fill: PCIe
             - name: NoC
               class: Legacy
               attributes:
@@ -64,7 +64,7 @@ architecture:
                     block-size: 8
                     network_fill: NoC
                     meshX: 4
-                - name: PEWeightBuffer[`]
+                - name: PEWeightBuffer[0..3]
                   class: storage
                   subclass: smartbuffer_RF
                   attributes:

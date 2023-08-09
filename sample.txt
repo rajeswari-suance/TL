@@ -1,0 +1,5 @@
+/app/setup/timeloop/build/timeloop-mapper simba/timeloop-mapper.map.yaml simba/arch_noc.yaml simba/constraints.yaml components/*.yaml workloads/resnet50/resnet50_layer1.yaml -o output/arch_noc/
+
+/app/setup/timeloop/build/timeloop-model simba/timeloop-mapper.map.yaml simba/arch_noc_lambda.yaml simba/constraints.yaml components/*.yaml workloads/resnet50/resnet50_layer1.yaml -o output/arch/
+
+scons -j2 --accelergy --static
